@@ -38,6 +38,7 @@
     }
     
     render() {
+        console.log(this.props);
         return (
             <h1 className="home">
                 <Link to='/app'>i am home</Link>

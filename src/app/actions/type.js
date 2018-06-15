@@ -13,3 +13,6 @@
 
  // 增加一个商品的数量
  export const ADD_AMOUNT = 'ADD_AMOUNT';
+
+ // 改变商品的数量
+ export const CHANGE_PRODUCT = 'CHANGE_PRODUCT';

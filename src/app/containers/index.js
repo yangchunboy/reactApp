@@ -8,6 +8,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import actions from '../actions/index';
+
  import App from '../components/index';
 
  const mapStateToProps = (state, ownProps) => {
@@ -18,7 +20,8 @@ import { connect } from 'react-redux';
   };
   
   const mapDispatchToProps = (dispatch, ownProps) => {
-    console.log('222222222222222222222222');
+    // console.log('222222222222222222222222');
+    const { changeProduct } = actions;
     return {
       onChange: () => {
         dispatch(changeProduct({ name: 'chuck', amount: 99, id: 'e' }));

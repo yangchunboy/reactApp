@@ -37,6 +37,7 @@
     }
     
     render() {
+        console.log(this.props);
         return (
             <h1 className="content">
                 我是content

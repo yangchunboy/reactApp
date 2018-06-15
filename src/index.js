@@ -5,8 +5,8 @@ import { createStore, combineReducers } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Layout from './app/components/layout';
-import App from './app/components/index';
-import Home from './home/components/index';
+import App from './app/containers/index';
+import Home from './home/containers/index';
 
 // import registerServiceWorker from './registerServiceWorker';
 

@@ -5,7 +5,7 @@
  * 
  */
 
-import { ADD_PRODUCT, REMOVE_PRODUCT } from './type';
+import { ADD_PRODUCT, REMOVE_PRODUCT, CHANGE_PRODUCT } from './type';
 
 const addProduct = ({ name, amount, id }) => {
     return {
