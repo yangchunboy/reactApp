@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
     "less": "^3.8.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -14,11 +15,15 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js",
-    "webpack": "webpack --config webpack.prod.js"
+    "devTest": "webpack --config webpack.dev.js",
+    "devWatch": "webpack --watch --config webpack.dev.js",
+    "webpack": "webpack --config webpack.prod.js",
+    "webpackServe": "webpack-serve --config webpack.prod.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
@@ -29,6 +34,7 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "webpack-serve": "^2.0.2"
   }
 }
