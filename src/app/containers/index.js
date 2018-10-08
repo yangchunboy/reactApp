@@ -13,7 +13,7 @@ import actions from '../actions/index';
  import App from '../components/index';
 
  const mapStateToProps = (state, ownProps) => {
-    console.log('1111111111111111111111111', state);
+    // console.log('1111111111111111111111111', state);
     return {
       ...state
     }
