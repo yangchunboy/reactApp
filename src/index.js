@@ -11,7 +11,6 @@ import Layout from './modules/app/components/layout';
 import App from './modules/app/containers/index';
 import Home from './modules/home/containers/index';
 
-// import registerServiceWorker from './registerServiceWorker';
 
 import reducers from './reducers';
 
@@ -35,4 +34,3 @@ const ReactRouter = ({ store }) => {
 
 
 ReactDOM.render(<ReactRouter store={store}/>, document.getElementById('root'));
-// registerServiceWorker();

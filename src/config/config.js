@@ -1,3 +1,5 @@
+export const host = "192.168.10.16";
+
 export const initState = {
     products: [
         {
