@@ -1,10 +1,12 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
     'babel-polyfill',
+    './src/theme/main.less',
     './src/index.js'
 ],
   plugins: [
@@ -27,6 +29,13 @@ module.exports = {
                loader: "style-loader" // creates style nodes from JS strings
            }, {
                loader: "css-loader" // translates CSS into CommonJS
+           },{
+               loader: "postcss-loader",
+               options: {
+                    plugins: () => autoprefixer({
+                        browsers: ['last 3 versions', '> 1%']
+                    })
+                }
            }]
        },
        {
@@ -43,7 +52,24 @@ module.exports = {
             plugins: ['transform-runtime'],
             presets: ['es2015', 'stage-0', 'react'],
           }
-       }
+       },
+       { 
+        test: /\.less$/,
+        use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+        }, {
+            loader: "css-loader" // translates CSS into CommonJS
+        },{
+            loader: "less-loader"
+        },{
+            loader: "postcss-loader",
+            options: {
+                plugins: () => autoprefixer({
+                    browsers: ['last 3 versions', '> 1%']
+                })
+            }
+        }]
+      },
    ]
 }
 };
