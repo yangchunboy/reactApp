@@ -4,7 +4,7 @@
  * @date 2018/06/14
  */
 
- import appReducer from './app/reducers/index';
+ import appReducer from './modules/app/reducers/index';
 
  export default {
     ...appReducer,

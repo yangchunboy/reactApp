@@ -42,6 +42,7 @@
         return (
             <h1 className="home">
                 <Link to='/app'>i am home</Link>
+                <img src="https://chuckboy.oss-cn-hangzhou.aliyuncs.com/ratel.jpg" alt="test"/>
             </h1>
         );        
     }

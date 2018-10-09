@@ -4,11 +4,12 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import './home/components/style.css';
+import './modules/home/components/style.css';
 
-import Layout from './app/components/layout';
-import App from './app/containers/index';
-import Home from './home/containers/index';
+
+import Layout from './modules/app/components/layout';
+import App from './modules/app/containers/index';
+import Home from './modules/home/containers/index';
 
 // import registerServiceWorker from './registerServiceWorker';
 

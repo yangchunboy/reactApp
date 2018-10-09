@@ -1,4 +1,4 @@
-import { initState } from '../../config/config';
+import { initState } from '../../../config/config';
 import { CHANGE_PRODUCT } from '../actions/type';
 
 const products = (state=initState, action) => {
