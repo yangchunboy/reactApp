@@ -6,18 +6,29 @@
  */
 
  import React, { Component } from 'react';
+ import api from '../../../api/index';
 
  class App extends Component{
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            ip: '0.0.0.0',
+        };
     }
 
     componentWillMount() {
 
     }
 
-    componentDidMount() {
-
+    async componentDidMount() {
+        const result = await api({ 
+            method: 'get',
+            uriName: 'getIp',
+        });
+        console.log(result);
+        this.setState({
+            ip: result.body,
+        });
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -37,11 +48,14 @@
     }
     
     render() {
-        console.log(this.props);
+        const { ip } = this.state;
         return (
-            <h1 className="content">
-                我是content
-            </h1>
+            <div>
+                <h1 className="content">
+                    我是content
+                </h1>
+                <div>{ip}</div>
+            </div>
         );        
     }
  };

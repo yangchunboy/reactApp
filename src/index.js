@@ -6,11 +6,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './modules/home/components/style.css';
 
-
 import Layout from './modules/app/components/layout';
 import App from './modules/app/containers/index';
 import Home from './modules/home/containers/index';
-
 
 import reducers from './reducers';
 
