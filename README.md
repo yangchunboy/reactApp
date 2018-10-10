@@ -4,8 +4,7 @@
 # 待完成
 1. 按需加载
 2. 服务端渲染
-3. 优化webpack开发的热更新
-4. react-router组件里面的自定义跳转路径
+3. react-router组件里面的自定义跳转路径
 
 # 已完成
 
@@ -16,3 +15,4 @@
 5. 使用webpack打包
 6. 支持使用less
 7. 加了autoprefixer
+8. 增加了webpack开发的热更新
