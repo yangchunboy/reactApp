@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { hot } from 'react-hot-loader' 
 
 import './modules/home/components/style.css';
 
@@ -29,6 +30,6 @@ const ReactRouter = ({ store }) => {
     );
 };
 
+const NewReactRouter = hot(module)(ReactRouter)
 
-
-ReactDOM.render(<ReactRouter store={store}/>, document.getElementById('root'));
+ReactDOM.render(<NewReactRouter store={store}/>, document.getElementById('root'));

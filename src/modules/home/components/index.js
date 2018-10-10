@@ -41,6 +41,7 @@
         console.log(this.props);
         return (
             <h1 className="home">
+                <div>test</div>
                 <Link to='/app'>i am home</Link>
                 <img src="https://chuckboy.oss-cn-hangzhou.aliyuncs.com/ratel.jpg" alt="test"/>
             </h1>
