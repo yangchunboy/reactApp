@@ -2,9 +2,8 @@
 一个用react+react-router+redux+weppack的一个简单的脚手架（未完成）
 
 # 待完成
-1. 按需加载
-2. 服务端渲染
-3. react-router组件里面的自定义跳转路径
+1. 服务端渲染
+2. react-router组件里面的自定义跳转路径
 
 # 已完成
 
@@ -16,3 +15,4 @@
 6. 支持使用less
 7. 加了autoprefixer
 8. 增加了webpack开发的热更新
+9. 支持懒加载
