@@ -2,11 +2,9 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const request = require('request')
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 module.exports = {
     entry: [
-        'babel-polyfill',
         './src/theme/main.less',
         './src/index.js'
     ],
@@ -16,7 +14,8 @@ module.exports = {
             title: 'Production',
             inject: true,
             template: './src/index.html',
-        })
+        }),
+        new BundleAnalyzerPlugin()
     ],
     output: {
         filename: 'bundle.js',

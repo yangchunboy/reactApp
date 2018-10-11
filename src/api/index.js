@@ -2,7 +2,7 @@
  * @author yangchunboy
  * @date 2018/10/10
  */
-import request from 'request';
+// import request from 'request';
 import { host } from '../config/config';
 
 /**
@@ -20,15 +20,16 @@ const api = ({ method, uriName, body }) => {
     else if (method === 'post' || method === 'POST') {
         Object.assign(params, { method, uri: `${host}${uriName}`, body });
     }
-    return Promise.resolve({
-        then(resolve, reject) {
-            request(params, (error, response, body) => {
-                console.log(error, response, body);
-                resolve( { body, response });
-                reject(error);
-            });
-        }
-    });
+    return '1.1.1.1';
+    // return Promise.resolve({
+    //     then(resolve, reject) {
+    //         request(params, (error, response, body) => {
+    //             console.log(error, response, body);
+    //             resolve( { body, response });
+    //             reject(error);
+    //         });
+    //     }
+    // });
 };
 
 export default api;
