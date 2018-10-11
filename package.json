@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
@@ -12,10 +13,8 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js",
-    "devTest": "webpack --config webpack.dev.js",
     "devWatch": "webpack --watch --config webpack.dev.js",
-    "webpack": "webpack --config webpack.prod.js",
-    "webpackServe": "webpack-serve --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
@@ -35,6 +34,7 @@
     "postcss-loader": "^3.0.0",
     "react-hot-loader": "^4.3.11",
     "style-loader": "^0.23.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-middleware": "^3.4.0",
