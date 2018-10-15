@@ -23,11 +23,11 @@
     async componentDidMount() {
         const result = await api({ 
             method: 'get',
-            uriName: 'getIp',
+            urlName: 'getIp', 
         });
         console.log(result);
         this.setState({
-            ip: result.body,
+            ip: result,
         });
     }
 
