@@ -2,7 +2,7 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 module.exports = {
     entry: [
         './src/theme/main.less',
@@ -14,8 +14,7 @@ module.exports = {
             title: 'Production',
             inject: true,
             template: './src/index.html',
-        }),
-        new BundleAnalyzerPlugin()
+        })
     ],
     output: {
         filename: 'bundle.js',
