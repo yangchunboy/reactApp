@@ -1,9 +1,8 @@
 # reactApp
-一个用react+react-router+redux+weppack的一个简单的脚手架（未完成）
+一个用react+react-router+redux+weppack的一个简单的脚手架（基本完成）
 
 # 待完成
 1. 服务端渲染
-2. react-router组件里面的自定义跳转路径
 
 # 已完成
 
