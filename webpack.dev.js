@@ -9,7 +9,14 @@ module.exports = merge(common, {
     contentBase: './dist',
     inline: true,
     hot: true,
-    port: 3000
+    openPage: '',
+    publicPath: '',
+    port: 3000,
+    historyApiFallback: true,
+    overlay: {
+      warnings: true,
+      errors:true
+  }
   },
   plugins: [
     new webpack.NamedModulesPlugin(),

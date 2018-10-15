@@ -4,21 +4,25 @@
  * 
  */
 
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import Loadable from 'react-loadable';
 import Loading from '../common/loading';
 
-const LoadableComponent = Loadable({
-    loader: () => import('./containers/index.js'),
-    loading() {
-      return <Loading />
-    }
-  });
-  
-  class LoadablePage extends Component {
-    render() {
-      return <LoadableComponent />;
-    }
-  }
 
+  const LoadableComponent = Loadable({
+      loader: () => import('./containers/index.js'),
+      loading() {
+        return <Loading />
+      }
+    });
+    
+    class LoadablePage extends Component {
+      render() {
+        return <LoadableComponent />;
+      }
+    }
 export default LoadablePage;
+
+

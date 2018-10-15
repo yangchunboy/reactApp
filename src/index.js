@@ -30,6 +30,6 @@ const ReactRouter = ({ store }) => {
     );
 };
 
-const NewReactRouter = hot(module)(ReactRouter)
+const NewReactRouter = hot(module)(ReactRouter);
 
 ReactDOM.render(<NewReactRouter store={store}/>, document.getElementById('root'));

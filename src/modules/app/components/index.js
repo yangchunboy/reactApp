@@ -62,9 +62,5 @@
     }
  };
 
- // 设置上下文类型
- App.contextTypes = {
-     router: React.PropTypes.object,
- };
  export default App;
  
