@@ -8,7 +8,7 @@ import { host } from '../config/config';
 /**
  * 
  * @param { string }  method 请求的类型
- * @param { string } uriName 请求的最后的名字
+ * @param { string } urlName 请求的最后的名字
  * @param { object } body 请求携带的参数
  */
 
@@ -32,9 +32,15 @@ const api = ({ method, urlName, body }) => {
         Object.assign(params, { method, body });
     }
 
+    // return fetch(url, params).then(response => response.json())
+    //     .then(data => data)
+    //     .catch(error => error);
     return fetch(url, params).then(response => response.json())
-        .then(data => data)
-        .catch(error => error);
+        .then((data) => {
+            return data;
+        }, (error) => {
+            return error;
+        })
 };
 
 export default api;
