@@ -21,6 +21,8 @@
     }
 
     async componentDidMount() {
+        // debugger;
+        // console.log(this.props.context);
         const result = await api({ 
             method: 'get',
             urlName: 'getIp', 
@@ -60,6 +62,9 @@
     }
  };
 
-
+ // 设置上下文类型
+ App.contextTypes = {
+     router: React.PropTypes.object,
+ };
  export default App;
  

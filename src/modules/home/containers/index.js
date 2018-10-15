@@ -7,6 +7,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { hot } from 'react-hot-loader'; 
 
  import Home from '../components/index';
 
@@ -25,4 +26,4 @@ import { connect } from 'react-redux';
     mapDispatchToProps,
   )(Home)
 
-export default appConnect;
+export default hot(module)(appConnect);

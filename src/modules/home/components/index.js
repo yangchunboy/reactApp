@@ -6,7 +6,6 @@
  */
 
  import React, { Component } from 'react';
- import { Link } from 'react-router-dom';
 
  class App extends Component{
     constructor(props) {
@@ -38,14 +37,19 @@
     }
     
     render() {
-        console.log(this.props);
+        // console.log(this.props);
         return (
             <h1 className="home">
                 <div>test</div>
-                <Link to='/app'>i am home</Link>
+                <div onClick={this.goApp.bind(this)}>click me to app</div>
                 <img src="https://chuckboy.oss-cn-hangzhou.aliyuncs.com/ratel.jpg" alt="test"/>
             </h1>
         );        
+    }
+
+    goApp() {
+        const { history } = this.props;
+        history.push('/app');
     }
  };
 
