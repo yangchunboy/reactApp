@@ -7,6 +7,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
+import { hot } from 'react-hot-loader'; 
 
 
 import actions from '../actions/index';
@@ -14,7 +15,7 @@ import actions from '../actions/index';
  import App from '../components/index';
 
  const mapStateToProps = (state, ownProps) => {
-    // console.log('1111111111111111111111111', state);
+    console.log('1111111111111111111111111', state);
     return {
       ...state
     }
@@ -37,4 +38,4 @@ import actions from '../actions/index';
 
 
 
-export default appConnect;
+export default hot(module)(appConnect);

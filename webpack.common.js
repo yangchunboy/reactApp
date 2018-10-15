@@ -70,6 +70,21 @@ module.exports = {
             },
         ]
     },
+    // webpack4最新配置，可以搜索关键字查查配置项
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    chunks: 'initial',
+                    minChunks: 2,
+                    maxInitialRequests: 5, // The default limit is too small to showcase the effect
+                    minSize: 0, // This is example is too small to create commons chunks
+                    name: 'common'
+                }
+            }
+        }
+    },
+
     node: {
         console: true,
         fs: 'empty',
