@@ -23,14 +23,17 @@
     async componentDidMount() {
         // debugger;
         // console.log(this.props.context);
-        const result = await api({ 
-            method: 'get',
-            urlName: 'getIp', 
-        });
-        console.log(result);
-        this.setState({
-            ip: result,
-        });
+        // const result = await api({ 
+        //     method: 'get',
+        //     urlName: 'getIp', 
+        // });
+        // console.log(result);
+        // this.setState({
+        //     ip: result,
+        // });
+        setTimeout(() => {
+            console.log('success');
+        }, 1000)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
