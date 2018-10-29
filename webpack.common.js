@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: [
-        './src/theme/main.less',
+        './src/index.less',
         './src/index.js'
     ],
     plugins: [

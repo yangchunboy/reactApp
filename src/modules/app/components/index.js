@@ -59,6 +59,7 @@
                 <h1 className="content">
                     我是content
                 </h1>
+                <div className="primary">我的背景是主颜色</div>
                 <div>{ip}</div>
             </div>
         );        
