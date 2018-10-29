@@ -7,7 +7,16 @@ module.exports = merge(common, {
   mode: 'production',
   plugins: [
     new UglifyJSPlugin({
-      sourceMap: true
+      sourceMap: true,
+      uglifyOptions: {
+        warnings: false,
+        parse: {},
+        compress: {
+          warnings: false,
+          drop_debugger: true,
+          drop_console: true
+        },
+      }
     })
   ]
 });
