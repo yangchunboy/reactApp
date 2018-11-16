@@ -63,15 +63,16 @@ module.exports = {
                 }, {
                     loader: "css-loader" // translates CSS into CommonJS
                 }, {
-                    loader: "less-loader"
-                }, {
                     loader: "postcss-loader",
                     options: {
                         plugins: () => autoprefixer({
                             browsers: ['last 3 versions', '> 1%']
                         })
                     }
-                }]
+                }, {
+                    loader: "less-loader"
+                }, 
+                ]
             },
         ]
     },
