@@ -10,6 +10,7 @@ import './modules/home/components/style.css';
 import Layout from './modules/app/components/layout';
 import App from './modules/app/index';
 import Home from './modules/home/containers/index';
+// import App from './modules/app/containers/index';
 
 import reducers from './reducers';
 

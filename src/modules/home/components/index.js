@@ -6,6 +6,8 @@
  */
 
  import React, { Component } from 'react';
+ import Test from './Test'
+ import { TestContext } from '../../../context'
 
  class App extends Component{
     constructor(props) {
@@ -17,7 +19,7 @@
     }
 
     componentDidMount() {
-
+        console.log(this)
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -40,8 +42,10 @@
         // console.log(this.props);
         return (
             <h1 className="home">
-                <div>test</div>
                 <div onClick={this.goApp.bind(this)}>click me to app</div>
+                <TestContext.Provider>
+                    <Test></Test>
+                </TestContext.Provider>
                 <img src="https://chuckboy.oss-cn-hangzhou.aliyuncs.com/ratel.jpg" alt="test"/>
             </h1>
         );        
@@ -53,6 +57,7 @@
     }
  };
 
+ App.contextType = TestContext
 
  export default App;
  
